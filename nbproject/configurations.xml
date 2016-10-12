@@ -28,7 +28,7 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-O2 -funsigned-char -std=gnu99"/>
+        <element flagsID="0" commonFlags="-O3 -funsigned-char -std=gnu99"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>

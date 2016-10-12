@@ -4,165 +4,6 @@
     <df root="." name="0">
       <df name=".dep">
       </df>
-      <df name="archive">
-      </df>
-      <df name="backup">
-        <df name="backup_0">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_1">
-          <df name=".dep">
-          </df>
-          <df name="output">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_11">
-          <df name=".dep">
-          </df>
-          <df name="inc">
-            <in>main.h</in>
-            <in>testx.h</in>
-          </df>
-          <df name="script">
-            <in>aa.c</in>
-            <in>aa.h</in>
-            <in>asd.c</in>
-            <in>asd.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>bb.c</in>
-            <in>bb.h</in>
-            <in>ddd.c</in>
-            <in>ddd.h</in>
-          </df>
-          <df name="src">
-            <in>aaa.c</in>
-            <in>aaa.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>main.c</in>
-            <in>testx.c</in>
-            <in>xx.c</in>
-            <in>xx.h</in>
-          </df>
-        </df>
-        <df name="backup_12">
-          <df name=".dep">
-          </df>
-          <df name="inc">
-            <in>main.h</in>
-            <in>testx.h</in>
-          </df>
-          <df name="script">
-            <in>aa.c</in>
-            <in>aa.h</in>
-            <in>asd.c</in>
-            <in>asd.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>bb.c</in>
-            <in>bb.h</in>
-            <in>ddd.c</in>
-            <in>ddd.h</in>
-          </df>
-          <df name="src">
-            <in>aaa.c</in>
-            <in>aaa.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>main.c</in>
-            <in>testx.c</in>
-            <in>xx.c</in>
-            <in>xx.h</in>
-          </df>
-        </df>
-        <df name="backup_13">
-          <df name=".dep">
-          </df>
-          <df name="inc">
-            <in>main.h</in>
-            <in>testx.h</in>
-          </df>
-          <df name="script">
-            <in>aa.c</in>
-            <in>aa.h</in>
-            <in>asd.c</in>
-            <in>asd.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>bb.c</in>
-            <in>bb.h</in>
-            <in>ddd.c</in>
-            <in>ddd.h</in>
-          </df>
-          <df name="src">
-            <in>aaa.c</in>
-            <in>aaa.h</in>
-            <in>asdf.c</in>
-            <in>asdf.h</in>
-            <in>main.c</in>
-            <in>testx.c</in>
-            <in>xx.c</in>
-            <in>xx.h</in>
-          </df>
-        </df>
-        <df name="backup_2">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_3">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_4">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_5">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_6">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_7">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-        <df name="backup_8">
-          <df name=".dep">
-          </df>
-          <df name="src">
-            <in>main.c</in>
-          </df>
-        </df>
-      </df>
       <df name="doc">
       </df>
       <df name="html">
@@ -189,14 +30,10 @@
         <in>motorThread.h</in>
         <in>motordefs.h</in>
         <in>motordefs_1.h</in>
-        <in>swill_json.c</in>
-        <in>swill_json.h</in>
-      </df>
-      <df name="test">
-      </df>
-      <df name="tests">
         <in>newcunittest.c</in>
         <in>newsimpletest.c</in>
+        <in>swill_json.c</in>
+        <in>swill_json.h</in>
       </df>
       <df name="tools">
       </df>
@@ -227,8 +64,6 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
-        <gdb_signals>
-        </gdb_signals>
         <gdb_options>
           <DebugOptions>
             <option name="gdb_source_dirs" value="src"/>

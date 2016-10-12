@@ -12,7 +12,7 @@
  */
 
 #include <stdio.h>
-
+#include "def.h"
 #include "channel.h"
 
 typedef struct {
@@ -102,6 +102,7 @@ void channelSetConnection(CHANNEL *chn, CHANNEL *connection) {
 }
 
 void channelSetMode(CHANNEL *chn, CHANNEL_MODE mode) {
+  DEBUGPRINT("Mode = %d\n",mode);
   chn->mode = mode;
 }
 
@@ -113,9 +114,10 @@ char *channel_modeToString(CHANNEL_MODE mode) {
   int i;
   i = 0;
 
+  
   for (i=0;i<30;i++) {
     if (mode2name[i].mode == CHANNEL_MODE_NONE) {
-      return "3x";
+      return "";
     }
     if (mode2name[i].mode == mode) {
       return mode2name[i].name;
@@ -136,6 +138,6 @@ char *channel_modeToString(CHANNEL_MODE mode) {
 
 char *channel_toString(CHANNEL *chn) {
   static char buf[40];
-  sprintf(buf, "%4.2f %10s", chn->value, channel_modeToString(chn->mode));
+  sprintf(buf, "%6.2f %-10s", chn->value, channel_modeToString(chn->mode));
   return buf;
 }
