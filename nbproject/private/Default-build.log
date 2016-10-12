@@ -1,0 +1,56 @@
+[1;37m-------------------------------- Begin ---------------------------[0m
+[1;35mBuilding:     [1;32mmakeplate [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;35mCompiling C:[0m [1;36m src/main.c [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;35mCompiling C:[0m [1;36m src/channel.c [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+[1;36msrc/channel.c: [1;32mIn function[0m[0m 'channelUpdate':
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_NONE' not handled in switch [-Wswitch]
+   switch (chn->mode) {
+   ^
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_VARIANCE' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_FIR' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_PWM' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_SINUS' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_RAMP' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:73:3: [1;33mwarning:[0m[0m enumeration value 'CHANNEL_MODE_LAST' not handled in switch [-Wswitch]
+[1;36msrc/channel.c:64:15: [1;33mwarning:[0m[0m [1;33munused variable[0m 'temp' [-Wunused-variable]
+   CHANNEL_VAL temp;
+               ^
+[1;36msrc/channel.c: [1;32mIn function[0m[0m 'channel_modeToString':
+[1;36msrc/channel.c:116:3: [1;33mwarning:[0m[0m suggest parentheses around assignment used as truth value [-Wparentheses]
+   while (mode2name[i].mode =! CHANNEL_MODE_NONE ) {
+   ^
+[1;36m[1;31mERROR:[0m[0m ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+[1;35mLinking:[0m
+             [1;36m output/makeplate [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+[1;35mCreating Extended Listing/Disassembly:[0m 
+             [1;36m output/makeplate.lss [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+[1;35mCreating Symbol Table:[0m 
+             [1;36m output/makeplate.sym [0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+
+[1;35mSize after build:[0m
+ERROR: ld.so: object 'libBuildTrace.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   text	   data	    bss	    dec	    hex	filename
+   3899	    952	    736	   5587	   15d3	output/makeplate
+
+
+[1;37m-------------------------------- End -----------------------------[0m
