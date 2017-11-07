@@ -3,6 +3,7 @@
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="src">
+        <in>alarm.c</in>
         <in>channel.c</in>
         <in>main.c</in>
       </df>
@@ -35,7 +36,7 @@
       <makefileType>
         <makeTool>
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
-          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <buildCommand>${MAKE} -f Makefile nc</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>output/mmtest</executablePath>
           <cTool>
@@ -43,6 +44,8 @@
               <pElem>.</pElem>
               <pElem>inc</pElem>
               <pElem>src</pElem>
+              <pElem>/usr/include/glib-2.0</pElem>
+              <pElem>/usr/lib/x86_64-linux-gnu/glib-2.0/include</pElem>
             </incDir>
             <preprocessorList>
               <Elem>DEBUG</Elem>
@@ -54,6 +57,10 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
+      <item path="src/alarm.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+        </cTool>
+      </item>
       <item path="src/channel.c" ex="false" tool="0" flavor2="3">
         <cTool flags="0">
         </cTool>

@@ -61,7 +61,7 @@ void channelSetValue(CHANNEL *chn, CHANNEL_VAL value) {
 
 void channelUpdate(CHANNEL *chn, CHANNEL_VAL newValue, uint8_t divider) {
   CHANNEL_VAL nVal;
-  CHANNEL_VAL temp;
+  //CHANNEL_VAL temp;
   
   // check if new value commes from connected channel or not
   if (chn->ch != NULL) {
@@ -93,6 +93,7 @@ void channelUpdate(CHANNEL *chn, CHANNEL_VAL newValue, uint8_t divider) {
     case CHANNEL_MODE_DELAY:       break;
     case CHANNEL_MODE_TIMER:       break;
     case CHANNEL_MODE_INTEGRATE: chn->value += newValue/divider;  break;
+    default: break;
     
   }
 }

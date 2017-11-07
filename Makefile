@@ -23,7 +23,8 @@ TARGET = mmtest
 
 # List C source files here. (C dependencies are automatically generated.)
 SRC = src/main.c    \
-      src/channel.c 
+      src/channel.c \
+			src/alarm.c
 
 # List C++ source files here. (C dependencies are automatically generated.)
 CPPSRC = 
@@ -38,9 +39,9 @@ INCLUDE = inc \
 
 # Libraries to link
 LIB   = -lm 
-#LIB += $(shell pkg-config --libs glib-2.0)
-#LIB += $(shell pkg-config --libs gthread-2.0)
-#LIB += $(shell pkg-config --libs ncurses)
+LIB += $(shell pkg-config --libs glib-2.0)
+LIB += $(shell pkg-config --libs gthread-2.0)
+LIB += $(shell pkg-config --libs ncurses)
 #LIB += $(shell pkg-config --libs lua5.1)
 #LIB += $(shell pkg-config --libs sqlite3)
 LIB += $(shell pkg-config --libs argtable2)
@@ -105,8 +106,8 @@ CFLAGS += -Wunreachable-code
 #CFLAGS += -Wa,-adhlns=$(<:%.c=$(OBJDIR)/%.lst)
 CFLAGS += $(patsubst %,-I%,$(INCLUDE))
 CFLAGS += -std=$(CSTANDARD)
-#CFLAGS += $(shell pkg-config --cflags glib-2.0)
-#CFLAGS += $(shell pkg-config --cflags gthread-2.0)
+CFLAGS += $(shell pkg-config --cflags glib-2.0)
+CFLAGS += $(shell pkg-config --cflags gthread-2.0)
 #CFLAGS += $(shell pkg-config --cflags lua5.1)
 #CFLAGS += $(shell pkg-config --cflags sqlite3)
 CFLAGS += $(shell pkg-config --cflags argtable2)
@@ -302,6 +303,7 @@ MSG_BUILDING         = "$(C_ACTION)Building:     "
 F_INF="s/In function/$$(printf "$(E_BR_GREEN)")&$$(printf "$(E_END)")/i"
 FF_INF="s/^.*In function/$$(printf "$(C_FILE)")&$$(printf "$(E_END)")/i"
 F_ERROR="s/error:/$$(printf "$(C_ERROR)")&$$(printf "$(E_END)")/i"
+F_FATAL_ERROR="s/fatal error:/$$(printf "$(C_ERROR)")&$$(printf "$(E_END)")/i"
 F_WARNING="s/warning:/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
 F_NOTE="s/note:/$$(printf "$(C_NOTE)")&$$(printf "$(E_END)")/i"
 FF_ERROR="s/^.*error:/$$(printf "$(C_FILE)")&$$(printf "$(E_END)")/i"
@@ -310,11 +312,17 @@ FF_NOTE="s/^.*note:/$$(printf "$(C_FILE)")&$$(printf "$(E_END)")/i"
 F_WARNING1="s/defined but not used/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
 F_WARNING2="s/unused variable/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
 F_WARNING3="s/may be used uninitialized in this function/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
-XX="s/\[-W.*\]/$$(printf "$(E_GREEN)")&$$(printf "$(E_END)")/g"
-C_FILTER   = | sed -ru -e $(F_ERROR)  -e $(F_WARNING)  -e $(F_NOTE) \
-                       -e $(FF_ERROR) -e $(FF_WARNING) -e $(FF_NOTE) \
-                       -e $(F_WARNING1) -e $(F_WARNING2) -e $(F_WARNING3) \
-                       -e $(F_INF) -e $(FF_INF) -e $(XX)
+F_WARNING4="s/implicit declaration of function/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
+F_WARNING5="s/value computed is not used/$$(printf "$(C_WARNING)")&$$(printf "$(E_END)")/i"
+F_BRACKET="s/\[-W.*\]/$$(printf "$(E_GREEN)")&$$(printf "$(E_END)")/g"
+#XX="s/\[[^][]*\]/$$(printf "$(E_BR_BLUE)")&$$(printf "$(E_END)")/i"
+#YY="s/\'[^][]*\'/$$(printf "$(E_BR_GREEN)")&$$(printf "$(E_END)")/i"
+C_FILTER   = | sed -ru -e $(F_FATAL_ERROR) -e $(F_ERROR) -e $(FF_ERROR)     \
+                       -e $(F_WARNING) -e $(FF_WARNING)                     \
+                       -e $(F_WARNING1) -e $(F_WARNING2) -e $(F_WARNING3)   \
+											 -e $(F_WARNING4) -e $(F_WARNING5)                    \
+											 -e $(F_NOTE) -e $(FF_NOTE)                           \
+											 -e $(F_INF) -e $(FF_INF) -e $(F_BRACKET)
 CPP_FILTER = $(C_FILTER)
 
 LD_ERROR1="s/undefined reference/$$(printf "$(C_ERROR)")&$$(printf "$(E_END)")/i"
